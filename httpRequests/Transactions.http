@@ -1,0 +1,26 @@
+@host = http://localhost:3333
+
+### GET All Transactions
+GET {{host}}/transactions
+
+
+### Create Transactions
+POST {{host}}/transactions
+Content-Type: application/json
+
+{
+  "title": "Testes Entrada {{$datetime iso8601}}",
+  "value": 1000,
+  "type": "income"
+}
+
+
+### Create Transactions
+POST {{host}}/transactions
+Content-Type: application/json
+
+{
+  "title": "Testes Saida {{$datetime iso8601}}",
+  "value": 1000,
+  "type": "outcome"
+}
